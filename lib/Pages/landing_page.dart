@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_tasks/Pages/profile.dart';
-import 'package:my_tasks/Pages/Tasks/tasks.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -9,7 +8,7 @@ class LandingPage extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           MyProfile(),
-          MyTasks(),
+          //MyTodo(),
           // Todo(),
           // Progress(),
           // Done(),
