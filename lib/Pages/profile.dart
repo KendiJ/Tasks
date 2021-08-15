@@ -1,3 +1,6 @@
+
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_tasks/Pages/Lenders/lendees_info.dart';
@@ -9,6 +12,17 @@ class MyProfile extends StatefulWidget {
 }
 
 class _MyProfileState extends State<MyProfile> {
+
+
+@override
+  void didChangeDependencies() async {
+    super.didChangeDependencies();
+    QuerySnapshot myuser = await FirebaseFirestore.instance
+    .collection('test').get();
+    print(myuser.docs[0].data());
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
