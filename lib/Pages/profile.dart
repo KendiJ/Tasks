@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_tasks/Pages/Lenders/lendees_info.dart';
 import 'package:my_tasks/Pages/Lenders/people_detail.dart';
 
 class MyProfile extends StatefulWidget {
@@ -37,7 +38,12 @@ class _MyProfileState extends State<MyProfile> {
             ),
             Card(
               child: ListTile(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TheirInfo()),
+                  );
+                },
                 title: Text('Mama Bria'),
                 trailing: Text('570/-'),
               ),
